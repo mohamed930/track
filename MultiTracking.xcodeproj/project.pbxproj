@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D3289BEB29320F3B00CB44D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3289BEA29320F3B00CB44D1 /* AppDelegate.swift */; };
-		D3289BED29320F3B00CB44D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3289BEC29320F3B00CB44D1 /* SceneDelegate.swift */; };
-		D3289BEF29320F3B00CB44D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3289BEE29320F3B00CB44D1 /* ViewController.swift */; };
-		D3289BF229320F3B00CB44D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3289BF029320F3B00CB44D1 /* Main.storyboard */; };
+		D3289BEF29320F3B00CB44D1 /* TrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3289BEE29320F3B00CB44D1 /* TrackingViewController.swift */; };
+		D3289BF229320F3B00CB44D1 /* Tracking Map Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3289BF029320F3B00CB44D1 /* Tracking Map Main.storyboard */; };
 		D3289BF429320F3D00CB44D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3289BF329320F3D00CB44D1 /* Assets.xcassets */; };
 		D3289BF729320F3D00CB44D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3289BF529320F3D00CB44D1 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,9 +17,8 @@
 /* Begin PBXFileReference section */
 		D3289BE729320F3B00CB44D1 /* MultiTracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiTracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3289BEA29320F3B00CB44D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D3289BEC29320F3B00CB44D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D3289BEE29320F3B00CB44D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D3289BF129320F3B00CB44D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D3289BEE29320F3B00CB44D1 /* TrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingViewController.swift; sourceTree = "<group>"; };
+		D3289BF129320F3B00CB44D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Tracking Map Main.storyboard"; sourceTree = "<group>"; };
 		D3289BF329320F3D00CB44D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3289BF629320F3D00CB44D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3289BF829320F3D00CB44D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,15 +54,46 @@
 		D3289BE929320F3B00CB44D1 /* MultiTracking */ = {
 			isa = PBXGroup;
 			children = (
-				D3289BEA29320F3B00CB44D1 /* AppDelegate.swift */,
-				D3289BEC29320F3B00CB44D1 /* SceneDelegate.swift */,
-				D3289BEE29320F3B00CB44D1 /* ViewController.swift */,
-				D3289BF029320F3B00CB44D1 /* Main.storyboard */,
-				D3289BF329320F3D00CB44D1 /* Assets.xcassets */,
-				D3289BF529320F3D00CB44D1 /* LaunchScreen.storyboard */,
-				D3289BF829320F3D00CB44D1 /* Info.plist */,
+				D3289BFE29320F7200CB44D1 /* AppDelegate */,
+				D3289C0129320FA900CB44D1 /* launchScreen */,
+				D3289BFF29320F7D00CB44D1 /* Track */,
+				D3289C0029320F8900CB44D1 /* Assists */,
 			);
 			path = MultiTracking;
+			sourceTree = "<group>";
+		};
+		D3289BFE29320F7200CB44D1 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				D3289BEA29320F3B00CB44D1 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		D3289BFF29320F7D00CB44D1 /* Track */ = {
+			isa = PBXGroup;
+			children = (
+				D3289BEE29320F3B00CB44D1 /* TrackingViewController.swift */,
+				D3289BF029320F3B00CB44D1 /* Tracking Map Main.storyboard */,
+			);
+			path = Track;
+			sourceTree = "<group>";
+		};
+		D3289C0029320F8900CB44D1 /* Assists */ = {
+			isa = PBXGroup;
+			children = (
+				D3289BF329320F3D00CB44D1 /* Assets.xcassets */,
+				D3289BF829320F3D00CB44D1 /* Info.plist */,
+			);
+			path = Assists;
+			sourceTree = "<group>";
+		};
+		D3289C0129320FA900CB44D1 /* launchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D3289BF529320F3D00CB44D1 /* LaunchScreen.storyboard */,
+			);
+			path = launchScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +156,7 @@
 			files = (
 				D3289BF729320F3D00CB44D1 /* LaunchScreen.storyboard in Resources */,
 				D3289BF429320F3D00CB44D1 /* Assets.xcassets in Resources */,
-				D3289BF229320F3B00CB44D1 /* Main.storyboard in Resources */,
+				D3289BF229320F3B00CB44D1 /* Tracking Map Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,21 +167,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3289BEF29320F3B00CB44D1 /* ViewController.swift in Sources */,
+				D3289BEF29320F3B00CB44D1 /* TrackingViewController.swift in Sources */,
 				D3289BEB29320F3B00CB44D1 /* AppDelegate.swift in Sources */,
-				D3289BED29320F3B00CB44D1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D3289BF029320F3B00CB44D1 /* Main.storyboard */ = {
+		D3289BF029320F3B00CB44D1 /* Tracking Map Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D3289BF129320F3B00CB44D1 /* Base */,
 			);
-			name = Main.storyboard;
+			name = "Tracking Map Main.storyboard";
 			sourceTree = "<group>";
 		};
 		D3289BF529320F3D00CB44D1 /* LaunchScreen.storyboard */ = {
@@ -289,12 +317,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X4YZSY77G5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MultiTracking/Info.plist;
+				INFOPLIST_FILE = MultiTracking/Assists/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "Tracking Map Main";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +333,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,12 +346,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X4YZSY77G5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MultiTracking/Info.plist;
+				INFOPLIST_FILE = MultiTracking/Assists/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "Tracking Map Main";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,7 +362,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
