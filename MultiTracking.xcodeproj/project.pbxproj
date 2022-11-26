@@ -13,6 +13,10 @@
 		D3289BF229320F3B00CB44D1 /* Tracking Map Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3289BF029320F3B00CB44D1 /* Tracking Map Main.storyboard */; };
 		D3289BF429320F3D00CB44D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3289BF329320F3D00CB44D1 /* Assets.xcassets */; };
 		D3289BF729320F3D00CB44D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3289BF529320F3D00CB44D1 /* LaunchScreen.storyboard */; };
+		D3C9C8C029321712001467F7 /* GoogleMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C9C8BF29321712001467F7 /* GoogleMap.swift */; };
+		D3C9C8C329321BF5001467F7 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C9C8C229321BF5001467F7 /* LocationModel.swift */; };
+		D3C9C8C529321CE1001467F7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3C9C8C429321CE1001467F7 /* GoogleService-Info.plist */; };
+		D3C9C8C829321D76001467F7 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C9C8C729321D76001467F7 /* Firebase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,10 @@
 		D3289BF329320F3D00CB44D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3289BF629320F3D00CB44D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3289BF829320F3D00CB44D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3C9C8BF29321712001467F7 /* GoogleMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMap.swift; sourceTree = "<group>"; };
+		D3C9C8C229321BF5001467F7 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		D3C9C8C429321CE1001467F7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D3C9C8C729321D76001467F7 /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		DE6D9185C5D576E204D41A9D /* Pods-MultiTracking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiTracking.release.xcconfig"; path = "Target Support Files/Pods-MultiTracking/Pods-MultiTracking.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,7 +62,6 @@
 				5F08C604AFC8FD9AE194E37F /* Pods-MultiTracking.debug.xcconfig */,
 				DE6D9185C5D576E204D41A9D /* Pods-MultiTracking.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,6 +88,9 @@
 			children = (
 				D3289BFE29320F7200CB44D1 /* AppDelegate */,
 				D3289C0129320FA900CB44D1 /* launchScreen */,
+				D3C9C8C129321BE3001467F7 /* Model */,
+				D3C9C8C629321D58001467F7 /* Firebase */,
+				D3C9C8BE293216FB001467F7 /* GoogleMap */,
 				D3289BFF29320F7D00CB44D1 /* Track */,
 				D3289C0029320F8900CB44D1 /* Assists */,
 			);
@@ -108,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				D3289BF329320F3D00CB44D1 /* Assets.xcassets */,
+				D3C9C8C429321CE1001467F7 /* GoogleService-Info.plist */,
 				D3289BF829320F3D00CB44D1 /* Info.plist */,
 			);
 			path = Assists;
@@ -119,6 +130,30 @@
 				D3289BF529320F3D00CB44D1 /* LaunchScreen.storyboard */,
 			);
 			path = launchScreen;
+			sourceTree = "<group>";
+		};
+		D3C9C8BE293216FB001467F7 /* GoogleMap */ = {
+			isa = PBXGroup;
+			children = (
+				D3C9C8BF29321712001467F7 /* GoogleMap.swift */,
+			);
+			path = GoogleMap;
+			sourceTree = "<group>";
+		};
+		D3C9C8C129321BE3001467F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D3C9C8C229321BF5001467F7 /* LocationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D3C9C8C629321D58001467F7 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				D3C9C8C729321D76001467F7 /* Firebase.swift */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3289BF729320F3D00CB44D1 /* LaunchScreen.storyboard in Resources */,
+				D3C9C8C529321CE1001467F7 /* GoogleService-Info.plist in Resources */,
 				D3289BF429320F3D00CB44D1 /* Assets.xcassets in Resources */,
 				D3289BF229320F3B00CB44D1 /* Tracking Map Main.storyboard in Resources */,
 			);
@@ -254,7 +290,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3C9C8C829321D76001467F7 /* Firebase.swift in Sources */,
+				D3C9C8C329321BF5001467F7 /* LocationModel.swift in Sources */,
 				D3289BEF29320F3B00CB44D1 /* TrackingViewController.swift in Sources */,
+				D3C9C8C029321712001467F7 /* GoogleMap.swift in Sources */,
 				D3289BEB29320F3B00CB44D1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
