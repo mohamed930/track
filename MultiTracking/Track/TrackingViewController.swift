@@ -8,10 +8,12 @@
 import UIKit
 
 class TrackingViewController: UIViewController {
+    
+    @IBOutlet weak var googleMapView:UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
 

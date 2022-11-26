@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -14,15 +14,30 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TrackingViewController" customModule="MultiTracking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dSp-Go-e5s">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dSp-Go-e5s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OPY-Rn-2vz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dSp-Go-e5s" secondAttribute="trailing" id="QRR-7I-6Dx"/>
+                            <constraint firstAttribute="bottom" secondItem="dSp-Go-e5s" secondAttribute="bottom" id="q6r-u0-mbo"/>
+                            <constraint firstItem="dSp-Go-e5s" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tpX-xy-4dc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="googleMapView" destination="dSp-Go-e5s" id="hOC-6T-957"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="97"/>
+            <point key="canvasLocation" x="132" y="96.798029556650249"/>
         </scene>
     </scenes>
     <resources>
