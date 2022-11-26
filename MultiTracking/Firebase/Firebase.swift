@@ -18,8 +18,18 @@ class Firebase {
         self.ref = ref
     }
     
-     func observeData(event: DataEventType = .value, completion: @escaping (DataSnapshot) -> Void) {
+     func observeDataWithListner(event: DataEventType = .value, completion: @escaping (DataSnapshot) -> Void) {
          
          ref?.observe(event, with: completion)
      }
+    
+    func observerDataWithoutListner(completion: @escaping (DataSnapshot) -> Void) {
+        ref?.getData(completion:  { error, snapshot in
+          guard error == nil else {
+            print(error!.localizedDescription)
+            return;
+          }
+          completion(snapshot)
+        });
+    }
 }

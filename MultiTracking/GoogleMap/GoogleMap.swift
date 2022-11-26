@@ -33,7 +33,7 @@ class GoogleMap {
         // Creates a marker in the center of the map.
         camera = GMSCameraPosition.camera(withLatitude: latit, longitude: long, zoom: zoom)
         mapView = GMSMapView.map(withFrame: gmapView.frame, camera: camera!)
-        var bounds = GMSCoordinateBounds()
+       // var bounds = GMSCoordinateBounds()
         
         for i in Arr {
             let marker = GMSMarker()
@@ -42,11 +42,11 @@ class GoogleMap {
             // marker.snippet = i.shopDescribtion
             
             marker.map = mapView
-            bounds = bounds.includingCoordinate(marker.position)
+            // bounds = bounds.includingCoordinate(marker.position)
         }
         
-        let update = GMSCameraUpdate.fit(bounds, withPadding: 100)
-        mapView!.animate(with: update)
+//        let update = GMSCameraUpdate.fit(bounds, withPadding: 100)
+//        mapView!.animate(with: update)
         
         mapView?.mapType = .satellite
         mapView?.frame = gmapView.bounds

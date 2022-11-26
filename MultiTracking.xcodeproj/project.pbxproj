@@ -17,6 +17,7 @@
 		D3C9C8C329321BF5001467F7 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C9C8C229321BF5001467F7 /* LocationModel.swift */; };
 		D3C9C8C529321CE1001467F7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3C9C8C429321CE1001467F7 /* GoogleService-Info.plist */; };
 		D3C9C8C829321D76001467F7 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C9C8C729321D76001467F7 /* Firebase.swift */; };
+		D3C9C8CC2932430C001467F7 /* trackingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C9C8CB2932430C001467F7 /* trackingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		D3C9C8C229321BF5001467F7 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		D3C9C8C429321CE1001467F7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D3C9C8C729321D76001467F7 /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
+		D3C9C8CB2932430C001467F7 /* trackingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trackingViewModel.swift; sourceTree = "<group>"; };
 		DE6D9185C5D576E204D41A9D /* Pods-MultiTracking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiTracking.release.xcconfig"; path = "Target Support Files/Pods-MultiTracking/Pods-MultiTracking.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,7 +110,8 @@
 		D3289BFF29320F7D00CB44D1 /* Track */ = {
 			isa = PBXGroup;
 			children = (
-				D3289BEE29320F3B00CB44D1 /* TrackingViewController.swift */,
+				D3C9C8CA293242FD001467F7 /* tracking ViewModel */,
+				D3C9C8C9293242F0001467F7 /* Tracking Controller */,
 				D3289BF029320F3B00CB44D1 /* Tracking Map Main.storyboard */,
 			);
 			path = Track;
@@ -154,6 +157,22 @@
 				D3C9C8C729321D76001467F7 /* Firebase.swift */,
 			);
 			path = Firebase;
+			sourceTree = "<group>";
+		};
+		D3C9C8C9293242F0001467F7 /* Tracking Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D3289BEE29320F3B00CB44D1 /* TrackingViewController.swift */,
+			);
+			path = "Tracking Controller";
+			sourceTree = "<group>";
+		};
+		D3C9C8CA293242FD001467F7 /* tracking ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D3C9C8CB2932430C001467F7 /* trackingViewModel.swift */,
+			);
+			path = "tracking ViewModel";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +312,7 @@
 				D3C9C8C829321D76001467F7 /* Firebase.swift in Sources */,
 				D3C9C8C329321BF5001467F7 /* LocationModel.swift in Sources */,
 				D3289BEF29320F3B00CB44D1 /* TrackingViewController.swift in Sources */,
+				D3C9C8CC2932430C001467F7 /* trackingViewModel.swift in Sources */,
 				D3C9C8C029321712001467F7 /* GoogleMap.swift in Sources */,
 				D3289BEB29320F3B00CB44D1 /* AppDelegate.swift in Sources */,
 			);
