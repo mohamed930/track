@@ -25,9 +25,15 @@ class TrackingViewController: UIViewController {
     }
 
     func SubscribeToPointResponse() {
-        trackingviewmodel.pointsBehaviourObserval.subscribe(onNext: { [weak self] _ in
+        trackingviewmodel.pointsBehaviourObserval.subscribe(onNext: { [weak self] response in
             guard let self = self else { return }
-            self.trackingviewmodel.ShowMap(view: self.googleMapView)
+            
+            if response.1 == "old" {
+                self.trackingviewmodel.updateMap(view: self.googleMapView)
+            }
+            else {
+                self.trackingviewmodel.ShowMap(view: self.googleMapView)
+            }
         }).disposed(by: disposebag)
     }
     

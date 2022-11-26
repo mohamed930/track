@@ -14,6 +14,7 @@ class GoogleMap {
     private var mapView:GMSMapView!
     private var apikey: String!
     private var camera:GMSCameraPosition?
+    static var markers = Array<GMSMarker>()
     
     init(gmapView: UIView) {
         self.gmapView = gmapView
@@ -33,20 +34,24 @@ class GoogleMap {
         // Creates a marker in the center of the map.
         camera = GMSCameraPosition.camera(withLatitude: latit, longitude: long, zoom: zoom)
         mapView = GMSMapView.map(withFrame: gmapView.frame, camera: camera!)
-       // var bounds = GMSCoordinateBounds()
+        var bounds = GMSCoordinateBounds()
+        GoogleMap.markers.removeAll()
         
         for i in Arr {
             let marker = GMSMarker()
             marker.position = CLLocationCoordinate2D(latitude: i.location.lati , longitude: i.location.long)
             marker.title = i.name
+            
             // marker.snippet = i.shopDescribtion
             
             marker.map = mapView
-            // bounds = bounds.includingCoordinate(marker.position)
+            bounds = bounds.includingCoordinate(marker.position)
+            GoogleMap.markers.append(marker)
         }
         
-//        let update = GMSCameraUpdate.fit(bounds, withPadding: 100)
-//        mapView!.animate(with: update)
+        let update = GMSCameraUpdate.fit(bounds, withPadding: 100)
+        mapView!.animate(with: update)
+        // mapView.animate(toZoom: zoom)
         
         mapView?.mapType = .satellite
         mapView?.frame = gmapView.bounds
@@ -55,6 +60,20 @@ class GoogleMap {
         
     }
     // ------------------------------------------------
+    
+    func updateMapLocation(lattitude:CLLocationDegrees,longitude:CLLocationDegrees, marker: GMSMarker){        
+        let camera = GMSCameraPosition.camera(withLatitude: lattitude, longitude: longitude, zoom: 16)
+        mapView?.camera = camera
+        mapView?.animate(to: camera)
+        
+        CATransaction.begin()
+        CATransaction.setAnimationDuration(2.0)
+        marker.position = CLLocationCoordinate2D.init(latitude: lattitude, longitude: longitude) // CLLocationCoordinate2D coordinate
+        CATransaction.commit()
+        
+        marker.map = self.mapView
+        
+    }
     
     
     func DrawLineBetweenTwoPoints() {
